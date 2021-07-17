@@ -1,0 +1,80 @@
+{
+    "name": "create-lib-baseon-ts",
+    "version": "0.0.1",
+    "description": "create lib base on typescript",
+    "main": "lib/index.js",
+    "bin": "lib/index.js",
+    "types": "./lib/types/",
+    "files": [
+        "lib"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "lint": "eslint ./src",
+        "test": "jest",
+        "test-c": "jest --coverage",
+        "prepare": "husky install",
+        "commit": "git add --all && git-cz"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/GitHubJiKe/create-lib-baseon-ts.git"
+    },
+    "keywords": [
+        "create",
+        "lib",
+        "ts"
+    ],
+    "author": "pengfeiyuan",
+    "publisher": "ypf9319@gmail.com",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/GitHubJiKe/create-lib-baseon-ts/issues"
+    },
+    "homepage": "https://github.com/GitHubJiKe/create-lib-baseon-ts#readme",
+    "devDependencies": {
+        "@babel/core": "^7.14.6",
+        "@babel/plugin-proposal-class-properties": "^7.14.5",
+        "@babel/plugin-proposal-object-rest-spread": "^7.14.7",
+        "@babel/preset-typescript": "^7.14.5",
+        "@types/jest": "^26.0.24",
+        "@types/node": "^16.3.3",
+        "@typescript-eslint/eslint-plugin": "^4.28.3",
+        "@typescript-eslint/parser": "^4.28.3",
+        "clean-webpack-plugin": "^4.0.0-alpha.0",
+        "eslint": "^7.30.0",
+        "eslint-config-standard": "^16.0.3",
+        "eslint-loader": "^4.0.2",
+        "eslint-plugin-import": "^2.23.4",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-promise": "^4.3.1",
+        "eslint-webpack-plugin": "^2.5.4",
+        "git-cz": "^4.7.6",
+        "husky": "^7.0.0",
+        "jest": "^27.0.6",
+        "prettier": "^2.3.2",
+        "ts-jest": "^27.0.3",
+        "ts-loader": "^9.2.3",
+        "typescript": "^4.3.5",
+        "webpack": "^5.45.1",
+        "webpack-cli": "^4.7.2"
+    },
+    "jest": {
+        "testEnvironment": "node"
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "printWidth": 100,
+        "semi": true,
+        "singleQuote": false,
+        "quoteProps": "as-needed",
+        "trailingComma": "es5"
+    },
+    "lint-staged": {
+        "/src/**/*.ts": [
+            "eslint",
+            "prettier --write"
+        ]
+    }
+}
