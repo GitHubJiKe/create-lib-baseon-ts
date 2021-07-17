@@ -1,6 +1,6 @@
 {
     "name": "create-lib-baseon-ts",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "create lib base on typescript",
     "main": "lib/index.js",
     "bin": "lib/index.js",
