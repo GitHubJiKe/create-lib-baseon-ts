@@ -1,4 +1,6 @@
 node_modules
 lib
+dist
 changelog.config.js
 jest.config.js
+gulpfile.js
