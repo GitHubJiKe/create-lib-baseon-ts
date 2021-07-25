@@ -1,13 +1,21 @@
 {
     "compileOnSave": false,
     "compilerOptions": {
+<<<<<<< HEAD
         "outDir": "lib/", // 打包到的目录
+=======
+        "outDir": "./dist/", // 打包到的目录
+>>>>>>> a325f8a668e39f79563f8fc8e314f1e774efba49
         "sourceMap": true, // 是否生成sourceMap（用于浏览器调试）
         "noImplicitAny": false,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "declaration": true, // 是否生成声明文件
+<<<<<<< HEAD
         "declarationDir": "lib/types", // 声明文件打包的位置
+=======
+        "declarationDir": "./dist/", // 声明文件打包的位置
+>>>>>>> a325f8a668e39f79563f8fc8e314f1e774efba49
         "declarationMap": true, // 是否生成声明文件map文件（便于调试）
         "moduleResolution": "node",
         "module": "CommonJS",
@@ -22,5 +30,5 @@
         "strict": false
     },
     "include": ["src/**/*.ts"], // 要打包的文件
-    "exclude": ["node_modules", "*.test.ts"]
+    "exclude": ["node_modules", "*.test.ts","*.spec.ts"]
 }
