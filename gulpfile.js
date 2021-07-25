@@ -7,8 +7,10 @@ const compress = () => src("lib/*.js").pipe(uglify()).pipe(dest("lib"));
 
 const build = () => src("src/*.ts").pipe(tsProject()).pipe(dest("lib"));
 
-const watchBuild = () => watch("src/*.ts", series(build, compress));
+const buildAndCompress = series(build, compress);
 
-const compileTask = process.env.NODE_ENV === "dev" ? watchBuild : build;
+const watchBuild = () => watch("src/*.ts", buildAndCompress);
+
+const compileTask = process.env.NODE_ENV === "dev" ? watchBuild : buildAndCompress;
 
 exports.default = compileTask;
