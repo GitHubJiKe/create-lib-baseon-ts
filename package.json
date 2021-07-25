@@ -9,12 +9,13 @@
         "lib"
     ],
     "scripts": {
-        "build": "tsc",
+        "build": "export NODE_ENV=prod && gulp",
+        "build:watch": "export NODE_ENV=dev && gulp",
         "lint": "eslint ./src",
         "test": "jest",
         "test-c": "jest --coverage",
         "commit": "git add --all && git-cz",
-        "deploy": "npm publish"
+        "deploy": "npm run build && npm publish"
     },
     "repository": {
         "type": "git",
@@ -49,6 +50,9 @@
         "eslint-plugin-prettier": "^3.4.0",
         "eslint-plugin-promise": "^4.3.1",
         "git-cz": "^4.7.6",
+        "gulp": "^4.0.2",
+        "gulp-uglify": "^3.0.2",
+        "gulp-uglyfly": "^1.4.2",
         "husky": "^7.0.0",
         "jest": "^27.0.6",
         "prettier": "^2.3.2",
